@@ -18,8 +18,6 @@ const LANGUAGES: { value: Language; label: string; flag: string }[] = [
 ]
 
 export function LanguageSelector({ value, onChange, disabled = false, label }: LanguageSelectorProps) {
-  const selected = LANGUAGES.find((lang) => lang.value === value)
-
   return (
     <div className="flex items-center gap-2">
       {label && <span className="text-sm text-gray-600">{label}</span>}

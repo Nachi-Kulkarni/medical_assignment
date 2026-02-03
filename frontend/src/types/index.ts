@@ -80,6 +80,7 @@ export interface WSSendMessage {
   type: 'send_message'
   text: string
   role: Role
+  audio_url?: string
 }
 
 export interface WSTypingMessage {

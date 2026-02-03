@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { conversationsApi } from '../services/api'
-import type { CreateConversationRequest, Conversation } from '../types'
+import type { CreateConversationRequest } from '../types'
 
 export function useConversations() {
   const queryClient = useQueryClient()

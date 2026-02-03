@@ -19,11 +19,11 @@ interface ChatPageContentProps {
 }
 
 export function ChatPageContent({ conversationId }: ChatPageContentProps) {
-  const { conversation, isLoading: convLoading } = useConversation(conversationId)
-  const { messages, isLoading: msgLoading, addMessage } = useMessages(conversationId)
-  const { translate, isTranslating } = useTranslate()
+  const { conversation } = useConversation(conversationId)
+  const { messages, isLoading: msgLoading } = useMessages(conversationId)
+  const { isTranslating } = useTranslate()
   const { generateSummary, isGenerating } = useSummary(conversationId)
-  const { role, setRole, doctorLanguage, patientLanguage } = useChatContext()
+  const { doctorLanguage, patientLanguage } = useChatContext()
 
   // WebSocket connection
   const { isConnected, messages: wsMessages, sendMessage, sendTyping, isTyping } = useWebSocket(conversationId)
