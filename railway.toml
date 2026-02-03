@@ -1,0 +1,13 @@
+[build]
+  builder = "DOCKERFILE"
+  dockerfilePath = "backend/Dockerfile"
+
+[deploy]
+  healthcheckPath = "/health"
+  healthcheckTimeout = 300
+  restartPolicyType = "ON_FAILURE"
+
+[[services]]
+  name = "backend"
+  source = "."
+  runtime = "python"
